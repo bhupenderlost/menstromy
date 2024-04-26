@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/app/static/css/main.a8ab51a6.css",
+    "main.js": "/app/static/js/main.964301a7.js",
+    "static/media/bg-login-register.jpeg": "/app/static/media/bg-login-register.38a569071c5c62128bf4.jpeg",
+    "static/media/google-logo.png": "/app/static/media/google-logo.960c670a7a8d952eba35.png",
+    "static/media/warning.svg": "/app/static/media/warning.bad9f62e9fb43bb1424a096605ac8647.svg",
+    "static/media/google.svg": "/app/static/media/google.d29f2c1bd2508716aa051d308a5aacbe.svg",
+    "index.html": "/app/index.html",
+    "static/media/error.svg": "/app/static/media/error.48a4582dc44400bc889eacbf3b1900e9.svg",
+    "static/media/success.svg": "/app/static/media/success.fa36d0d2e54886bf882d1d57cf387811.svg",
+    "static/media/index.cjs": "/app/static/media/index.cd351d7c31d0d3fccf96.cjs",
+    "main.a8ab51a6.css.map": "/app/static/css/main.a8ab51a6.css.map",
+    "main.964301a7.js.map": "/app/static/js/main.964301a7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a8ab51a6.css",
+    "static/js/main.964301a7.js"
+  ]
+}

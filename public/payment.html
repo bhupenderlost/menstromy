@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PaymentGateway</title>
+</head>
+<script type="text/javascript" src="https://checkout.razorpay.com/v1/razorpay.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  // Single instance on page.
+  var razorpay = new Razorpay({
+    key: 'rzp_live_KNsGqTQrVfZp5z',
+    // logo, displayed in the payment processing popup
+    image: 'https://i.imgur.com/n5tjHFD.png',
+  });
+
+  // Fetching the payment.
+  razorpay.once('ready', function(response) {
+    console.log(response.methods);
+  });
+
+  // Submitting the data.
+  var data = {
+    amount: 100,
+    currency: "INR",
+    description: "",
+    contact: 7454052462,
+    email: "s.bhupender2401@gmail.com",
+    order_id: 'order_O1DFKnir37EWDb',
+    notes: {
+        address: "Bhupender Singh",
+    },
+
+  };
+
+  $("#razorGateway").click(function() {
+    alert("Payment clicked");
+    // has to be placed within a user-initiated context, such as click, in order for popup to open.
+    razorpay.createPayment(data);
+
+    razorpay.on('payment.success', function(resp) {
+      alert("Payment success.");
+      alert(resp.razorpay_payment_id);
+      console.log(resp.razorpay_payment_id);
+
+      alert(resp.razorpay_order_id);
+      alert(resp.razorpay_signature);
+    }); // will pass payment ID, order ID, and Razorpay signature to success handler.
+
+    razorpay.on('payment.error', function(resp) {
+      alert(resp.error.description);
+      console.log(resp)
+    }); // will pass error object to error handler
+  });
+});
+</script>
+<body>
+  <input type="button" id="razorGateway" name="submit" class="submit action-button" value="Pay" />
+</body>
+</html>
