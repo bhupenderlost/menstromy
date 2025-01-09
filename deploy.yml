@@ -59,4 +59,4 @@ jobs:
           app-name: 'Menstromy'
           slot-name: 'production'
           package: .
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_41f74b5484f54d8a9b4cff85d300399b }}
+          publish-profile: ${{ Secrets }}
